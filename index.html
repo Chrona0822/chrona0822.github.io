@@ -22,8 +22,15 @@
 
   <!-- ── CENTER LOGO ── -->
   <!-- Replace these with your own logo/avatar images -->
-  <img src="assets/logo-text.svg" loading="lazy" alt="Your Name" class="logo-center text"/>
-  <img src="assets/logo-cat.png"        loading="lazy" alt="Avatar"     class="logo-center"/>
+  <svg class="logo-center text" viewBox="0 10 400 190" xmlns="http://www.w3.org/2000/svg" aria-label="Always Exploring" overflow="visible">
+    <defs>
+      <path id="textArc" d="M 20,200 A 180,180 0 0,1 380,200"/>
+    </defs>
+    <text font-family="VT323, monospace" font-size="28" fill="#1a1a1a" letter-spacing="4">
+      <textPath href="#textArc" startOffset="50%" text-anchor="middle">ALWAYS EXPLORING</textPath>
+    </text>
+  </svg>
+  <img src="assets/logo-cat.png" loading="lazy" alt="Avatar" class="logo-center"/>
 
   <!-- ════════════════════════════════════════
        POPUPS (draggable, Windows 95-style)
@@ -109,7 +116,7 @@
         </a>
 
         <!-- EDIT: your GitHub username in the href -->
-        <a href="https://github.com/cpeng0822" target="_blank" class="contact-link">
+        <a href="https://github.com/Chrona0822" target="_blank" class="contact-link">
           <img src="assets/icon-github.svg" alt="GitHub" class="link-icon"/>
           <span>GitHub</span>
         </a>
@@ -143,17 +150,8 @@
     <!-- Update logo src, href, company, role, date, and tech per card -->
     <div class="portfolio-grid">
 
-      <div class="exp-card">
-        <div class="exp-card-header">
-          <img src="assets/logo-ea.svg" alt="EA" class="exp-card-logo"/>
-          <div class="exp-card-meta">
-            <a href="https://www.ea.com" target="_blank" class="exp-card-company">Electronic Arts</a>
-            <div class="exp-card-role">Playtesting Volunteer · Stockholm</div>
-            <div class="exp-card-date">Dec 2025 – Present</div>
-          </div>
-        </div>
-        <div class="exp-card-tech">Game UX Feedback · Structured Playtesting</div>
-      </div>
+      <!-- ── WORK ── -->
+      <div class="portfolio-section-header">WORK</div>
 
       <div class="exp-card">
         <div class="exp-card-header">
@@ -161,34 +159,9 @@
           <div class="exp-card-meta">
             <a href="https://systemvetardagen.se" target="_blank" class="exp-card-company">Systemvetardagen</a>
             <div class="exp-card-role">Full Stack Developer · Stockholm</div>
-            <div class="exp-card-date">Sep 2025 – Mar 2026</div>
           </div>
         </div>
         <div class="exp-card-tech">React · TypeScript · Go · PostgreSQL · CI/CD</div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-card-header">
-          <img src="assets/logo-kiberone.png" alt="KiberOne" class="exp-card-logo"/>
-          <div class="exp-card-meta">
-            <a href="https://kiberone.se" target="_blank" class="exp-card-company">KiberOne</a>
-            <div class="exp-card-role">Programming Teacher · Stockholm</div>
-            <div class="exp-card-date">Aug 2025 – Present</div>
-          </div>
-        </div>
-        <div class="exp-card-tech">Coding Education · Ages 6–12 · English</div>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-card-header">
-          <img src="assets/logo-su.png" alt="Stockholm University" class="exp-card-logo"/>
-          <div class="exp-card-meta">
-            <a href="https://www.su.se" target="_blank" class="exp-card-company">Stockholm Univ.</a>
-            <div class="exp-card-role">MSc Computer Science · Stockholm</div>
-            <div class="exp-card-date">Sep 2024 – Jun 2026 (expected)</div>
-          </div>
-        </div>
-        <div class="exp-card-tech">Machine Learning · NLP · AI Agents · PyTorch</div>
       </div>
 
       <div class="exp-card">
@@ -197,7 +170,6 @@
           <div class="exp-card-meta">
             <a href="https://www.statestreet.com" target="_blank" class="exp-card-company">State Street</a>
             <div class="exp-card-role">Senior Engineer · Hangzhou</div>
-            <div class="exp-card-date">Apr 2018 – Aug 2024</div>
           </div>
         </div>
         <div class="exp-card-tech">ETL · 5M+ records/day · Cucumber · JMeter</div>
@@ -209,10 +181,48 @@
           <div class="exp-card-meta">
             <a href="https://www.mctchina.com" target="_blank" class="exp-card-company">MCT Technology</a>
             <div class="exp-card-role">QA Engineer → Team Lead · Shanghai</div>
-            <div class="exp-card-date">Feb 2016 – Mar 2018</div>
           </div>
         </div>
         <div class="exp-card-tech">JMeter · Performance Testing · Lead of 4</div>
+      </div>
+
+      <!-- ── OTHER ROLES ── -->
+      <div class="portfolio-section-header">OTHER ROLES</div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-kiberone.png" alt="KiberOne" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://kiberone.se" target="_blank" class="exp-card-company">KiberOne</a>
+            <div class="exp-card-role">Programming Teacher · Stockholm</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">Coding Education · Ages 6–12 · English</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-ea.svg" alt="EA" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://www.ea.com" target="_blank" class="exp-card-company">Electronic Arts</a>
+            <div class="exp-card-role">Playtesting Volunteer · Stockholm</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">Game UX Feedback · Structured Playtesting</div>
+      </div>
+
+      <!-- ── EDUCATION ── -->
+      <div class="portfolio-section-header">EDUCATION</div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-su.png" alt="Stockholm University" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://www.su.se" target="_blank" class="exp-card-company">Stockholm Univ.</a>
+            <div class="exp-card-role">MSc Computer Science · Stockholm</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">Machine Learning · NLP · AI Agents · PyTorch</div>
       </div>
 
     </div>
@@ -235,7 +245,7 @@
     </div>
     <div class="credit-content">
       <!-- Replace with your avatar or logo -->
-      <img src="assets/logo-cat.png" loading="lazy" alt="" class="icon-cat"/>
+      <img src="assets/logo-dog.svg" loading="lazy" alt="" class="icon-cat"/>
       <div class="credit-text">
         <h3>Built by Chrona Peng</h3>
         <p>Design inspired by the KC Kat Creative Webflow template.</p>
@@ -301,12 +311,12 @@
       <div class="nav-bar-divider"></div>
     </div>
 
-    <!-- Looping ticker — replace text with something about you -->
+    <!-- Looping ticker -->
     <div class="looping-text-wrapper">
       <!-- EDIT: the scrolling ticker text -->
       <div class="ticker-track">
-        <div class="infinity-text">*** Chrona Peng *** Full Stack · ML · Game Dev *** Stockholm, Sweden *** Open to new opportunities *** </div>
-        <div class="infinity-text">*** Chrona Peng *** Full Stack · ML · Game Dev *** Stockholm, Sweden *** Open to new opportunities *** </div>
+        <div class="infinity-text">*** Chrona Peng *** Full Stack · ML · Game Dev *** Stockholm, Sweden ***  </div>
+        <div class="infinity-text">*** Always exploring *** </div>
       </div>
     </div>
 
@@ -388,6 +398,16 @@
     $el.css("display", "flex").hide().fadeIn(150);
     $el.css("z-index", 200);
   }
+
+  // ── Restore visible popups after browser tab wakes from sleep ──
+  var _openPopups = [];
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") {
+      _openPopups = $(".popup:visible").map(function(){ return this.id; }).get();
+    } else {
+      _openPopups.forEach(function(id){ $("#" + id).css("display", "flex"); });
+    }
+  });
 
   // ── Live clock ──
   function clock() {
