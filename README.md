@@ -2,4 +2,4 @@
 
 Personal portfolio website built with HTML, CSS, and jQuery.
 
-Live at: https://chrona0822.github.io
+Live at: https://chrona.github.io
