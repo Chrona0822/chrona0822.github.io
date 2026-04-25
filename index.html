@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Chrona Peng — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Inconsolata:wght@400;700&family=Overpass+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- jQuery + jQuery UI for draggable popups -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body class="body">
+<div class="desktop-wrapper">
+
+  <!-- ── CENTER LOGO ── -->
+  <!-- Replace these with your own logo/avatar images -->
+  <img src="assets/logo-text.svg" loading="lazy" alt="Your Name" class="logo-center text"/>
+  <img src="assets/logo-cat.png"        loading="lazy" alt="Avatar"     class="logo-center"/>
+
+  <!-- ════════════════════════════════════════
+       POPUPS (draggable, Windows 95-style)
+  ════════════════════════════════════════ -->
+
+  <!-- ── Services / About popup ── -->
+  <div id="popup-services" class="popup is-services">
+    <div class="popup-top-bar">
+      <div class="popup-title-wrap">
+        <!-- Replace with your own icon -->
+        <img src="assets/icon-pencil.png" loading="lazy" alt="" class="popup-icon"/>
+        <div class="popup-title">About</div>
+      </div>
+      <div class="popup-button-wrap">
+        <a href="#" class="popup-button expand-btn">
+          <img src="assets/icon-expand.svg" loading="lazy" alt="expand"/>
+        </a>
+        <a href="#" class="popup-button close-btn">
+          <img src="assets/icon-close.png" loading="lazy" alt="close"/>
+        </a>
+      </div>
+    </div>
+    <div class="services-wrapper">
+      <!-- EDIT: swap this src for your own photo -->
+      <img src="assets/profile-photo.jpg" loading="lazy" alt="Chrona Peng" class="services-image"/>
+
+      <!-- EDIT: your headline -->
+      <h1>Full Stack Developer & ML Student</h1>
+
+      <!-- EDIT: your bio — keep it 2-3 sentences -->
+      <p>Based in Stockholm. MSc Computer Science at Stockholm University with a focus on Machine Learning. Prior Engineer at State Street. Passionate about full-stack, game development and AI agents.</p>
+
+      <!-- EDIT: skills — format is "Category: tech · tech · tech" -->
+      <div class="skills-block">
+        <div class="skills-row">
+          <span class="skills-cat">Full Stack</span>
+          <span class="skills-tags">React · TypeScript · Go · Python · SQL</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-cat">ML / AI</span>
+          <span class="skills-tags">PyTorch · TensorFlow · scikit-learn · BERT · spaCy</span>
+        </div>
+        <div class="skills-row">
+          <span class="skills-cat">DevOps</span>
+          <span class="skills-tags">Docker · Azure · AWS · CI/CD · Git · Jenkins</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Contact popup ── -->
+  <div id="popup-contact" class="popup is-contact">
+    <div class="popup-top-bar">
+      <div class="popup-title-wrap">
+        <img src="assets/icon-envelope.png" loading="lazy" alt="" class="popup-icon"/>
+        <div class="popup-title">Contact</div>
+      </div>
+      <div class="popup-button-wrap">
+        <a href="#" class="popup-button expand-btn">
+          <img src="assets/icon-expand.svg" loading="lazy" alt="expand"/>
+        </a>
+        <a href="#" class="popup-button close-btn">
+          <img src="assets/icon-close.png" loading="lazy" alt="close"/>
+        </a>
+      </div>
+    </div>
+    <div class="contact-wrapper">
+      <!-- EDIT: swap for your own contact image -->
+      <img src="assets/contact-cat.png" loading="lazy" alt="Contact"/>
+      <div class="contact-text-wrapper">
+        <h3 class="icons-heading">LET'S CHAT</h3>
+
+        <!-- EDIT: your email -->
+        <a href="mailto:cpeng0822@gmail.com" class="contact-link">
+          <img src="assets/icon-mail.svg" alt="Email" class="link-icon"/>
+          <span>Email</span>
+        </a>
+
+        <!-- EDIT: your LinkedIn profile URL -->
+        <a href="https://linkedin.com/in/chong-peng-0822-" target="_blank" class="contact-link">
+          <img src="assets/icon-linkedin.svg" alt="LinkedIn" class="link-icon"/>
+          <span>LinkedIn</span>
+        </a>
+
+        <!-- EDIT: your GitHub username in the href -->
+        <a href="https://github.com/cpeng0822" target="_blank" class="contact-link">
+          <img src="assets/icon-github.svg" alt="GitHub" class="link-icon"/>
+          <span>GitHub</span>
+        </a>
+
+        <!-- EDIT: your location (not a link) -->
+        <div class="contact-link">
+          <img src="assets/icon-location.svg" alt="Location" class="link-icon"/>
+          <span>Stockholm, Sweden</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Portfolio popup ── -->
+  <div id="popup-portfolio" class="popup is-portfolio">
+    <div class="popup-top-bar">
+      <div class="popup-title-wrap">
+        <img src="assets/icon-portfolio.png" loading="lazy" alt="" class="popup-icon"/>
+        <div class="popup-title">Portfolio</div>
+      </div>
+      <div class="popup-button-wrap">
+        <a href="#" class="popup-button expand-btn">
+          <img src="assets/icon-expand.svg" loading="lazy" alt="expand"/>
+        </a>
+        <a href="#" class="popup-button close-btn">
+          <img src="assets/icon-close.png" loading="lazy" alt="close"/>
+        </a>
+      </div>
+    </div>
+    <!-- EDIT: each .exp-card = one entry. Ordered newest → oldest.     -->
+    <!-- Update logo src, href, company, role, date, and tech per card -->
+    <div class="portfolio-grid">
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-ea.svg" alt="EA" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://www.ea.com" target="_blank" class="exp-card-company">Electronic Arts</a>
+            <div class="exp-card-role">Playtesting Volunteer · Stockholm</div>
+            <div class="exp-card-date">Dec 2025 – Present</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">Game UX Feedback · Structured Playtesting</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-systemvetardagen.ico" alt="Systemvetardagen" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://systemvetardagen.se" target="_blank" class="exp-card-company">Systemvetardagen</a>
+            <div class="exp-card-role">Full Stack Developer · Stockholm</div>
+            <div class="exp-card-date">Sep 2025 – Mar 2026</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">React · TypeScript · Go · PostgreSQL · CI/CD</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-kiberone.png" alt="KiberOne" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://kiberone.se" target="_blank" class="exp-card-company">KiberOne</a>
+            <div class="exp-card-role">Programming Teacher · Stockholm</div>
+            <div class="exp-card-date">Aug 2025 – Present</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">Coding Education · Ages 6–12 · English</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-su.png" alt="Stockholm University" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://www.su.se" target="_blank" class="exp-card-company">Stockholm Univ.</a>
+            <div class="exp-card-role">MSc Computer Science · Stockholm</div>
+            <div class="exp-card-date">Sep 2024 – Jun 2026 (expected)</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">Machine Learning · NLP · AI Agents · PyTorch</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-statestreet.svg" alt="State Street" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://www.statestreet.com" target="_blank" class="exp-card-company">State Street</a>
+            <div class="exp-card-role">Senior Engineer · Hangzhou</div>
+            <div class="exp-card-date">Apr 2018 – Aug 2024</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">ETL · 5M+ records/day · Cucumber · JMeter</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-header">
+          <img src="assets/logo-mct.png" alt="MCT Technology" class="exp-card-logo"/>
+          <div class="exp-card-meta">
+            <a href="https://www.mctchina.com" target="_blank" class="exp-card-company">MCT Technology</a>
+            <div class="exp-card-role">QA Engineer → Team Lead · Shanghai</div>
+            <div class="exp-card-date">Feb 2016 – Mar 2018</div>
+          </div>
+        </div>
+        <div class="exp-card-tech">JMeter · Performance Testing · Lead of 4</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Credits popup ── -->
+  <div id="popup-credits" class="popup credit">
+    <div class="popup-top-bar">
+      <div class="popup-title-wrap">
+        <div class="popup-title">Credits</div>
+      </div>
+      <div class="popup-button-wrap">
+        <a href="#" class="popup-button expand-btn">
+          <img src="assets/icon-expand.svg" loading="lazy" alt="expand"/>
+        </a>
+        <a href="#" class="popup-button close-btn">
+          <img src="assets/icon-close.png" loading="lazy" alt="close"/>
+        </a>
+      </div>
+    </div>
+    <div class="credit-content">
+      <!-- Replace with your avatar or logo -->
+      <img src="assets/logo-cat.png" loading="lazy" alt="" class="icon-cat"/>
+      <div class="credit-text">
+        <h3>Built by Chrona Peng</h3>
+        <p>Design inspired by the KC Kat Creative Webflow template.</p>
+        <ul>
+          <li>Clock code adapted from <a href="https://codepen.io/ed-fast/pen/ExjbRe" target="_blank">CodePen by ed-fast</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       DESKTOP ICONS (top-left)
+  ════════════════════════════════════════ -->
+  <div class="desktop-icons-wrapper">
+    <a id="icon-portfolio" href="#" class="desktop-icon-wrapper is-portfolio-icon">
+      <img src="assets/icon-portfolio.png" loading="lazy" alt="" class="desktop-icons"/>
+      <h2 class="icons-heading">Portfolio</h2>
+    </a>
+    <a id="icon-services" href="#" class="desktop-icon-wrapper is-portfolio-icon">
+      <img src="assets/icon-pencil.png" loading="lazy" alt="" class="desktop-icons"/>
+      <h2 class="icons-heading">About</h2>
+    </a>
+    <a id="icon-contact" href="#" class="desktop-icon-wrapper is-portfolio-icon">
+      <img src="assets/icon-envelope.png" loading="lazy" alt="" class="desktop-icons"/>
+      <h2 class="icons-heading">Contact</h2>
+    </a>
+  </div>
+
+  <!-- ════════════════════════════════════════
+       TASKBAR (bottom)
+  ════════════════════════════════════════ -->
+  <div class="navigation-bar">
+
+    <!-- Start menu -->
+    <div class="start-menu-wrap" id="start-menu">
+      <div class="start-strip">
+        <!-- Replace with your name -->
+        <div class="text-block">Chrona</div>
+      </div>
+      <a id="menu-portfolio" href="#" class="start-menu-item-wrap">
+        <img src="assets/icon-portfolio.png" loading="lazy" alt="" class="start-icon"/>
+        <div class="menu-link-title">PORTFOLIO</div>
+      </a>
+      <a id="menu-about" href="#" class="start-menu-item-wrap">
+        <img src="assets/icon-pencil.png" loading="lazy" alt="" class="start-icon"/>
+        <div class="menu-link-title">ABOUT</div>
+      </a>
+      <a id="menu-contact" href="#" class="start-menu-item-wrap">
+        <img src="assets/icon-envelope.png" loading="lazy" alt="" class="start-icon"/>
+        <div class="menu-link-title">CONTACT</div>
+      </a>
+      <div class="divider"></div>
+      <a id="menu-credits" href="#" class="start-menu-item-wrap">
+        <div class="menu-link-title">CREDITS</div>
+      </a>
+    </div>
+
+    <!-- MENU button -->
+    <div class="menu-side-wrapper">
+      <a id="menu-toggle" href="#" class="menu-button">
+        <h3 class="menu-title">MENU</h3>
+      </a>
+      <div class="nav-bar-divider"></div>
+    </div>
+
+    <!-- Looping ticker — replace text with something about you -->
+    <div class="looping-text-wrapper">
+      <!-- EDIT: the scrolling ticker text -->
+      <div class="ticker-track">
+        <div class="infinity-text">*** Chrona Peng *** Full Stack · ML · Game Dev *** Stockholm, Sweden *** Open to new opportunities *** </div>
+        <div class="infinity-text">*** Chrona Peng *** Full Stack · ML · Game Dev *** Stockholm, Sweden *** Open to new opportunities *** </div>
+      </div>
+    </div>
+
+    <div class="nav-bar-divider"></div>
+
+    <!-- Clock -->
+    <div class="clock-wrapper">
+      <img src="assets/icon-clock.svg" loading="lazy" alt="" class="clock-icon"/>
+      <div id="clock" class="clock"></div>
+    </div>
+  </div>
+
+</div><!-- end .desktop-wrapper -->
+
+<script>
+  // ── Draggable popups ──
+  $("#popup-portfolio").draggable({ handle: ".popup-top-bar" });
+  $("#popup-services").draggable({ handle: ".popup-top-bar" });
+  $("#popup-contact").draggable({ handle: ".popup-top-bar" });
+  $("#popup-credits").draggable({ handle: ".popup-top-bar" });
+
+  // Bring clicked popup to front
+  $(".popup").on("mousedown", function () {
+    $(".popup").css("z-index", function(_, v){ return parseInt(v) > 100 ? 100 : v; });
+    $(this).css("z-index", 200);
+  });
+
+  // ── Open popups from desktop icons ──
+  $("#icon-portfolio").on("click", function(e){
+    e.preventDefault();
+    showPopup($("#popup-portfolio"));
+  });
+  $("#icon-services").on("click", function(e){
+    e.preventDefault();
+    showPopup($("#popup-services"));
+  });
+  $("#icon-contact").on("click", function(e){
+    e.preventDefault();
+    showPopup($("#popup-contact"));
+  });
+
+  // ── Start menu toggle ──
+  $("#menu-toggle").on("click", function(e){
+    e.preventDefault();
+    $("#start-menu").toggle();
+  });
+  $(document).on("click", function(e){
+    if (!$(e.target).closest("#menu-toggle, #start-menu").length) {
+      $("#start-menu").hide();
+    }
+  });
+
+  // ── Start menu links ──
+  $("#menu-portfolio").on("click", function(e){
+    e.preventDefault(); $("#start-menu").hide(); showPopup($("#popup-portfolio"));
+  });
+  $("#menu-about").on("click", function(e){
+    e.preventDefault(); $("#start-menu").hide(); showPopup($("#popup-services"));
+  });
+  $("#menu-contact").on("click", function(e){
+    e.preventDefault(); $("#start-menu").hide(); showPopup($("#popup-contact"));
+  });
+  $("#menu-credits").on("click", function(e){
+    e.preventDefault(); $("#start-menu").hide(); showPopup($("#popup-credits"));
+  });
+
+  // ── Close & expand buttons ──
+  $(".close-btn").on("click", function(e){
+    e.preventDefault();
+    $(this).closest(".popup").fadeOut(150);
+  });
+  $(".expand-btn").on("click", function(e){
+    e.preventDefault();
+    const popup = $(this).closest(".popup");
+    popup.toggleClass("is-expanded");
+  });
+
+  function showPopup($el) {
+    $el.css("display", "flex").hide().fadeIn(150);
+    $el.css("z-index", 200);
+  }
+
+  // ── Live clock ──
+  function clock() {
+    const now = new Date();
+    let h = now.getHours(), m = now.getMinutes(), s = now.getSeconds();
+    const meridiem = h >= 12 ? " PM" : " AM";
+    if (h > 12) h -= 12;
+    else if (h === 0) h = 12;
+    if (m < 10) m = "0" + m;
+    if (s < 10) s = "0" + s;
+    document.getElementById("clock").textContent = h + ":" + m + ":" + s + meridiem;
+  }
+  setInterval(clock, 1000);
+  clock();
+</script>
+</body>
+</html>
