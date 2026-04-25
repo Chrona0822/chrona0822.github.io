@@ -53,8 +53,16 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   max-width: 200px;
 }
 .logo-center.text {
-  top: 35%;
-  max-width: 260px;
+  top: 32%;
+  max-width: 340px;
+}
+.logo-text-el {
+  font-family: VT323, sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  text-align: center;
+  color: var(--black);
+  white-space: nowrap;
 }
 
 /* ── Desktop icons (top-left) ── */
@@ -98,7 +106,7 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
 }
 .popup.is-services  { z-index: 20;  top: 7%;  left: 14%; }
 .popup.is-contact   { z-index: 25;  top: 31%; left: 62%; width: auto; }
-.popup.is-portfolio { z-index: 20;  top: 10%; left: 34%; }
+.popup.is-portfolio { z-index: 20;  top: 5%; left: 25%; width: 55rem; max-height: 88vh; }
 .popup.credit       { z-index: 150; top: 15%; left: 30%; width: 25rem; }
 
 .popup-top-bar {
@@ -145,6 +153,9 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   gap: .5rem;
   padding: .5rem;
   background-color: var(--white-smoke);
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 .exp-card {
   background-color: var(--white);
@@ -170,7 +181,7 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
 .exp-card-meta { display: flex; flex-direction: column; min-width: 0; }
 .exp-card-company {
   font-family: VT323, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   line-height: 1.2;
   color: var(--black);
   display: block;
@@ -180,20 +191,20 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
 }
 .exp-card-company:hover { opacity: 0.65; }
 .exp-card-role {
-  font-family: 'Inconsolata', monospace;
-  font-size: 0.75rem;
+  font-family: VT323, sans-serif;
+  font-size: 0.95rem;
   color: #888;
   line-height: 1.3;
 }
 .exp-card-date {
-  font-family: 'Inconsolata', monospace;
-  font-size: 0.7rem;
+  font-family: VT323, sans-serif;
+  font-size: 0.8rem;
   color: #bbb;
   margin-top: 0.1rem;
 }
 .exp-card-tech {
-  font-family: 'Inconsolata', monospace;
-  font-size: 0.72rem;
+  font-family: VT323, sans-serif;
+  font-size: 0.92rem;
   color: var(--dark-grey);
   margin-top: auto;
   padding-top: 0.45rem;
@@ -214,8 +225,8 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: 'Inconsolata', monospace;
-  font-size: 1rem;
+  font-family: VT323, sans-serif;
+  font-size: 1.1rem;
   font-weight: 400;
   color: var(--black);
   padding: 0.15rem 0;
@@ -231,21 +242,29 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   align-items: flex-start;
   padding: 2rem;
 }
-.credit-text { padding-left: 1rem; font-size: 1rem; font-family: sans-serif; }
+.credit-text { padding-left: 1rem; font-size: 1rem; font-family: VT323, sans-serif; }
 .icon-cat { width: 2rem; height: auto; }
 
-/* ── Popup body text — readable Inconsolata, not VT323 ── */
+/* ── Popup body text ── */
 .services-wrapper p {
-  font-family: 'Inconsolata', monospace;
-  font-size: 1rem;
+  font-family: VT323, sans-serif;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.65;
   text-align: center;
 }
-.skills-block { font-size: 0.95rem; }
-.skills-cat   { font-size: 0.85rem; }
-.skills-tags  { font-size: 0.9rem; }
-.credit-text  { font-size: 0.95rem; line-height: 1.6; }
+.portfolio-section-header {
+  grid-column: 1 / -1;
+  background-color: var(--light-pink);
+  padding: 0.25rem 0.6rem;
+  font-family: VT323, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+.skills-block { font-size: 1.05rem; }
+.skills-cat   { font-size: 0.95rem; }
+.skills-tags  { font-size: 1rem; }
+.credit-text  { font-size: 1.05rem; line-height: 1.6; }
 
 /* ── Navigation bar (taskbar) ── */
 .navigation-bar {
@@ -370,7 +389,7 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
 /* ── Skills block (about popup) ── */
 .skills-block {
   width: 100%;
-  font-family: 'Inconsolata', monospace;
+  font-family: VT323, sans-serif;
   font-size: 0.85rem;
   margin-top: 0.8rem;
 }
