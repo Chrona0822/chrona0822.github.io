@@ -65,6 +65,56 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   white-space: nowrap;
 }
 
+/* ── Laika hover bubble ── */
+.laika-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.laika-bubble {
+  display: none;
+  position: absolute;
+  left: 90%;
+  top: -30%;
+  width: 290px;
+  z-index: 300;
+}
+.laika-wrap:hover .laika-bubble {
+  display: block;
+}
+.bubble-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+.bubble-inner {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  left: 10%;
+  right: 6%;
+  font-family: VT323, sans-serif;
+  font-size: 1.15rem;
+  color: #3d2817;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.bubble-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.85em;
+  background: #3d2817;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 0.7s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
 /* ── Desktop icons (top-left) ── */
 .desktop-icons-wrapper {
   width: 10%;
@@ -86,9 +136,9 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
 .desktop-icons { width: 5rem; }
 .icons-heading {
   text-transform: uppercase;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  font-family: VT323, sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: VT323, sans-serif; 
   font-size: 1.8rem;
   line-height: 3rem;
 }
@@ -98,16 +148,14 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   background-color: var(--white-smoke);
   display: none;
   flex-flow: column;
-  justify-content: center;
   width: 40rem;
-  height: auto;
   padding: .4rem;
   position: absolute;
 }
-.popup.is-services  { z-index: 20;  top: 7%;  left: 14%; }
-.popup.is-contact   { z-index: 25;  top: 31%; left: 62%; width: auto; }
-.popup.is-portfolio { z-index: 20;  top: 5%; left: 25%; width: 55rem; max-height: 88vh; }
-.popup.credit       { z-index: 150; top: 15%; left: 30%; width: 25rem; }
+.popup.is-services  { z-index: 20;  top: 5%;  left: 14%; width: 45rem; bottom: 5rem; }
+.popup.is-contact   { z-index: 25;  top: 10%; left: 62%; width: 20rem; }
+.popup.is-portfolio { z-index: 20;  top: 5%;  left: 25%; width: 55rem; bottom: 5rem; }
+.popup.credit       { z-index: 150; top: 15%; left: 30%; width: 40rem; }
 
 .popup-top-bar {
   background-color: var(--light-pink);
@@ -143,8 +191,11 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   flex-direction: column;
   align-items: center;
   padding: 0 2.6rem 1rem;
+  overflow-y: scroll;
+  flex: 1;
+  min-height: 0;
 }
-.services-image { padding-top: .3rem; padding-bottom: 1rem; max-width: 160px; border-radius: 8px; }
+.services-image { padding-top: .3rem; padding-bottom: 1rem; max-width: 220px; border-radius: 8px; }
 
 /* ── Portfolio popup — 2-col card grid ── */
 .portfolio-grid {
@@ -153,7 +204,7 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   gap: .5rem;
   padding: .5rem;
   background-color: var(--white-smoke);
-  overflow-y: auto;
+  overflow-y: scroll;
   flex: 1;
   min-height: 0;
 }
@@ -233,7 +284,7 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
 }
 .contact-link:hover { opacity: 0.65; }
 .link-icon { width: 1.3rem; height: 1.3rem; flex-shrink: 0; }
-.contact-wrapper img:first-child { max-width: 90px; display: block; margin: 0 auto .6rem; }
+.contact-wrapper img:first-child { max-width: 240px; display: block; margin: 0 auto .6rem; }
 
 /* ── Credits popup ── */
 .credit-content {
@@ -243,7 +294,7 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   padding: 2rem;
 }
 .credit-text { padding-left: 1rem; font-size: 1rem; font-family: VT323, sans-serif; }
-.icon-cat { width: 2rem; height: auto; }
+.icon-cat { width: 10rem; height: auto; }
 
 /* ── Popup body text ── */
 .services-wrapper p {
@@ -427,3 +478,13 @@ ul { margin-top: 0; margin-bottom: 10px; padding-left: 40px; }
   .logo-center { max-width: 20%; position: relative; top: auto; }
   .logo-center.text { max-width: 50%; position: relative; top: auto; }
 }
+
+/* ── Scrollbar styling ── */
+.portfolio-grid::-webkit-scrollbar,
+.services-wrapper::-webkit-scrollbar { width: 8px; }
+.portfolio-grid::-webkit-scrollbar-track,
+.services-wrapper::-webkit-scrollbar-track { background: var(--white-smoke); }
+.portfolio-grid::-webkit-scrollbar-thumb,
+.services-wrapper::-webkit-scrollbar-thumb { background: #bbb; border: 2px solid var(--white-smoke); }
+.portfolio-grid::-webkit-scrollbar-thumb:hover,
+.services-wrapper::-webkit-scrollbar-thumb:hover { background: #888; }

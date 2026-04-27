@@ -4,6 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <title>Chrona Peng — Portfolio</title>
+  <link rel="icon" href="assets/laika-logo.ico" type="image/x-icon"/>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -30,7 +31,15 @@
       <textPath href="#textArc" startOffset="50%" text-anchor="middle">ALWAYS EXPLORING</textPath>
     </text>
   </svg>
-  <img src="assets/logo-cat.png" loading="lazy" alt="Avatar" class="logo-center"/>
+  <div class="laika-wrap">
+    <img src="assets/laika-logo.ico" loading="lazy" alt="Avatar" class="logo-center laika-img"/>
+    <div class="laika-bubble">
+      <img src="assets/dialogue-bubble.svg" class="bubble-bg" alt=""/>
+      <div class="bubble-inner">
+        <span class="bubble-text"></span><span class="bubble-cursor"></span>
+      </div>
+    </div>
+  </div>
 
   <!-- ════════════════════════════════════════
        POPUPS (draggable, Windows 95-style)
@@ -99,7 +108,7 @@
     </div>
     <div class="contact-wrapper">
       <!-- EDIT: swap for your own contact image -->
-      <img src="assets/contact-cat.png" loading="lazy" alt="Contact"/>
+      <img src="assets/chat.jpg" loading="lazy" alt="Contact"/>
       <div class="contact-text-wrapper">
         <h3 class="icons-heading">LET'S CHAT</h3>
 
@@ -245,7 +254,7 @@
     </div>
     <div class="credit-content">
       <!-- Replace with your avatar or logo -->
-      <img src="assets/logo-dog.svg" loading="lazy" alt="" class="icon-cat"/>
+      <img src="assets/credit.jpg" loading="lazy" alt="" class="icon-cat"/>
       <div class="credit-text">
         <h3>Built by Chrona Peng</h3>
         <p>Design inspired by the KC Kat Creative Webflow template.</p>
@@ -422,6 +431,29 @@
   }
   setInterval(clock, 1000);
   clock();
+
+  // ── Laika typewriter bubble ──
+  var _typeTimer = null;
+  var _typeMsg = "Welcome to my mom's portfolio!";
+  $(".laika-wrap").on("mouseenter", function () {
+    var $text = $(".bubble-text");
+    var $cursor = $(".bubble-cursor");
+    $text.text("");
+    clearTimeout(_typeTimer);
+    var i = 0;
+    function typeNext() {
+      if (i < _typeMsg.length) {
+        $text.text(_typeMsg.slice(0, ++i));
+        // reposition cursor right after text
+        $cursor.css("left", $text.position().left + $text.width());
+        _typeTimer = setTimeout(typeNext, 65);
+      }
+    }
+    typeNext();
+  }).on("mouseleave", function () {
+    clearTimeout(_typeTimer);
+    $(".bubble-text").text("");
+  });
 </script>
 </body>
 </html>
